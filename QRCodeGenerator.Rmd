@@ -2,6 +2,7 @@
 title: "How to generate QR Code of eLTER-RI by qrencoder package"
 output: 
   html_document:
+    keep_md: true
     toc: true
     toc_depth: 5
     toc_float: true
