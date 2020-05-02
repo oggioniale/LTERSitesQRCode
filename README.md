@@ -31,7 +31,7 @@ sitesLTER<- read.csv2("./nameCoordsSites.csv", header = T, sep = ";")
 DT::datatable(networksLTER)
 ```
 
-![](QRCodeGenerator_files/figure-gfm/LTER%20Networks%20DataTable-1.png)<!-- -->
+![](QRCodeGenerator_files/figure-gfm/LTER%20Networks%20DataTable-1.png)
 
 ### LTER Sites
 
@@ -39,16 +39,11 @@ DT::datatable(networksLTER)
 DT::datatable(sitesLTER)
 ```
 
-![](QRCodeGenerator_files/figure-gfm/LTER%20Sites%20DataTable-1.png)<!-- -->
+![](QRCodeGenerator_files/figure-gfm/LTER%20Sites%20DataTable-1.png)
 
 ## QR Codes
 
-[**qrencoder package**](https://github.com/hrbrmstr/qrencoder) allows to
-create QRCode, without limit. The QR Code generate below is about
-[**LTER-Italy
-Network**](https://deims.org/f30007c4-8a6e-4f11-ab87-569db54638fe). The
-URL of this network is collected by networks LTER dataframe imported
-above.
+[**qrencoder package**](https://github.com/hrbrmstr/qrencoder) allows to create QRCode, without limit. The QR Code generate below is about [**LTER-Italy Network**](https://deims.org/f30007c4-8a6e-4f11-ab87-569db54638fe). The URL of this network is collected by networks LTER dataframe imported above.
 
 ``` r
 # devtools::install_github("hrbrmstr/qrencoder")
@@ -62,9 +57,7 @@ image(qrencode_raster(urlSite),
 
 ![](QRCodeGenerator_files/figure-gfm/QRCODE%20Network-1.png)<!-- -->
 
-The QR Code generate below is about [**Lago Maggiore LTER
-site**](https://deims.org/f30007c4-8a6e-4f11-ab87-569db54638fe). The URL
-of this network is collected by sites LTER dataframe imported above.
+The QR Code generate below is about [**Lago Maggiore LTER site**](https://deims.org/f30007c4-8a6e-4f11-ab87-569db54638fe). The URL of this network is collected by sites LTER dataframe imported above.
 
 ``` r
 urlSite <- as.character(sitesLTER$deimsid[79])
