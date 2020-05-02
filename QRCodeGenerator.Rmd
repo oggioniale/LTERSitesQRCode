@@ -1,20 +1,22 @@
 ---
 title: "How to generate QR Code of eLTER-RI by qrencoder package"
-output: 
-  html_document:
-    output: 
-      github_document:
-        html_preview: false
-        toc: true
-        toc_depth: 2
-        fig_width: 5
-        fig_height: 5
-        dev: png
-        includes:
-          after_body: footer.html
-        toc_float: true
-        theme: flatly
 author: "Alessandro Oggioni - 27 April 2019"
+description: ""
+params:
+  year: 2019
+  region: Europe
+  printcode: TRUE
+  data: nameCoordsSites.csv, namCoordsNetwoks.csv
+output:
+  github_document:
+    toc: true
+    html_preview: false
+    # toc_depth: 2
+    # fig_width: 5
+    # fig_height: 5
+    # dev: jpeg
+    # includes:
+    #   after_body: footer.md
 ---
 
 
