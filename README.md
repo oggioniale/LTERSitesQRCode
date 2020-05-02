@@ -1,8 +1,3 @@
-# LTERSitesQRCode
-How to generate QR Code of eLTER RI sites or network by qrencoder package
-
-please visit the [wiki opage](https://github.com/oggioniale/LTERSitesQRCode/wiki)
-
 How to generate QR Code of eLTER-RI by qrencoder package
 ================
 Alessandro Oggioni - 27 April 2019
@@ -12,10 +7,11 @@ Alessandro Oggioni - 27 April 2019
       - [LTER Sites](#lter-sites)
   - [QR Codes](#qr-codes)
 
-\#\#Introduction How to generate QRCode by [**qrencoder
-package**](https://github.com/hrbrmstr/qrencoder)? This is a R Markdown
-notebook, when you execute code within the notebook, the results appear
-beneath the code.
+## Introduction 
+
+How to generate QRCode of eLTER RI sites or network by [**qrencoder package**](https://github.com/hrbrmstr/qrencoder)? 
+
+This is a R Markdown notebook, when you execute code within the notebook, the results appear beneath the code.
 
 ## Data
 
