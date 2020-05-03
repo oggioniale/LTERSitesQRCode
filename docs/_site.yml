@@ -33,7 +33,8 @@ navbar:
     - icon: fa-question fa-lg
       href: https://example.com
 output:
-  html_document:  
+  html_document:
+    theme: jekyll-theme-slate
     toc: true  
     toc_float: true
     toc_depth: 2
