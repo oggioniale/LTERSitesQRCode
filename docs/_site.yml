@@ -1,0 +1,48 @@
+title: "How to generate QR Code of eLTER-RI by qrencoder package"
+author: "Alessandro Oggioni - 27 April 2019"
+description: ""
+params:
+  year: 2019
+  region: Europe
+  printcode: TRUE
+  # data: nameCoordsSites.csv, namCoordsNetwoks.csv
+navbar:
+  title: "Website"
+  type: inverse
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "About"
+      icon: fa-info
+      href: about.html
+    - text: "More"
+      icon: fa-gear
+      menu:
+        - text: "Heading 1"
+        - text: "Page A"
+          href: page_a.html
+        - text: "Page B"
+          href: page_b.html
+        - text: "---------"
+        - text: "Heading 2"
+        - text: "Page C"
+          href: page_c.html
+        - text: "Page D"
+          href: page_d.html
+  right:
+    - icon: fa-question fa-lg
+      href: https://example.com
+output:
+  html_document:  
+    toc: true  
+    toc_float: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 5
+    dev: png
+    fig_caption: true
+    includes:
+      # in_header: header.html
+      # before_body: doc_prefix.html
+      after_body: doc_suffix.html
