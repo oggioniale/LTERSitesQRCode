@@ -6,17 +6,20 @@ params:
   year: 2019
   region: Europe
   printcode: TRUE
-  data: nameCoordsSites.csv, namCoordsNetwoks.csv
+  # data: nameCoordsSites.csv, namCoordsNetwoks.csv
 output:
-  github_document:
-    toc: true
-    html_preview: false
-    # toc_depth: 2
-    # fig_width: 5
-    # fig_height: 5
-    # dev: jpeg
-    # includes:
-    #   after_body: footer.md
+  html_document:  
+    toc: true  
+    toc_float: true
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 5
+    dev: png
+    fig_caption: true
+    includes:
+      # in_header: header.html
+      # before_body: doc_prefix.html
+      after_body: doc_suffix.html
 ---
 
 
@@ -26,13 +29,12 @@ This is a R Markdown notebook, when you execute code within the notebook, the re
 
 ## Data
 Import `csv file` into R and verify the content.
-
 ```{r Import data}
 suppressPackageStartupMessages(library(DT))
 # Import Networks list
-networksLTER <- read.csv2("./nameCoordsNetworks.csv", header = T, sep = ",")
+networksLTER <- utils::read.csv2("../nameCoordsNetworks.csv", header = T, sep = ",")
 # Import Sites list
-sitesLTER<- read.csv2("./nameCoordsSites.csv", header = T, sep = ";")
+sitesLTER<- utils::read.csv2("../nameCoordsSites.csv", header = T, sep = ";")
 ```
 
 ### LTER Networks
