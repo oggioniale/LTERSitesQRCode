@@ -1,4 +1,5 @@
 name: "How to generate QR Code of eLTER-RI by qrencoder package"
+url: https://oggioniale.github.io/LTERSitesQRCode/
 params:
   year: 2019
   region: Europe
