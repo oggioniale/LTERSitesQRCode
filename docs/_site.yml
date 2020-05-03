@@ -34,7 +34,7 @@ navbar:
       href: https://example.com
 output:
   html_document:
-    theme: jekyll-theme-slate
+    theme: Slate
     toc: true  
     toc_float: true
     toc_depth: 2
