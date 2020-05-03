@@ -1,5 +1,7 @@
 ---
 title: "How to generate QR Code of eLTER-RI by qrencoder package"
+author: "Alessandro Oggioni - 27 April 2019"
+description: ""
 ---
 
 ##Introduction

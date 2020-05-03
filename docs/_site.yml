@@ -1,11 +1,10 @@
-title: "How to generate QR Code of eLTER-RI by qrencoder package"
-author: "Alessandro Oggioni - 27 April 2019"
-description: ""
+name: "How to generate QR Code of eLTER-RI by qrencoder package"
 params:
   year: 2019
   region: Europe
   printcode: TRUE
   # data: nameCoordsSites.csv, namCoordsNetwoks.csv
+output_dir: "."
 navbar:
   title: "Website"
   type: inverse
