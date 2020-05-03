@@ -12,7 +12,7 @@ navbar:
   left:
     - text: "Home"
       icon: fa-home
-      href: index.html
+      href: QRCodeGenerator.html
     - text: "About"
       icon: fa-info
       href: about.html
