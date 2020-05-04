@@ -1,12 +1,8 @@
 ---
-title: "How to generate QR Code of eLTER-RI by qrencoder package"
-author: "Alessandro Oggioni - 27 April 2019"
-description: ''
 ---
 
-##Introduction
-How to generate QRCode by [**qrencoder package**](https://github.com/hrbrmstr/qrencoder)?
-This is a R Markdown notebook, when you execute code within the notebook, the results appear beneath the code.
+## Introduction
+This is one of the R functions produced to support the development of a package dedicated to the eLTER Research Infrastructure (eLTER RI). In this case it’s about how to generate QR Code of [**eLTER-RI sites or network**](https://deims.org/models) by [**DEIMS-ID**](https://deims.org/docs/deimsid.html) and using [**qrencoder package**](https://github.com/hrbrmstr/qrencoder).
 
 ## Data
 Import `csv file` into R and verify the content.
@@ -29,12 +25,17 @@ DT::datatable(sitesLTER)
 ```
 
 ## QR Codes
+### Prerequisite:
+install qrencoder by
+```{r}
+devtools::install_github("hrbrmstr/qrencoder")
+suppressPackageStartupMessages(library(qrencoder))
+```
+
 [**qrencoder package**](https://github.com/hrbrmstr/qrencoder) allows to create QRCode, without limit.
 The QR Code generate below is about [**LTER-Italy Network**](https://deims.org/f30007c4-8a6e-4f11-ab87-569db54638fe). The URL of this network is collected by networks LTER dataframe imported above.
 
 ```{r QRCODE Network, warning=FALSE}
-# devtools::install_github("hrbrmstr/qrencoder")
-suppressPackageStartupMessages(library(qrencoder))
 urlSite <- as.character(networksLTER$URL[12])
 par(mar = c(0,0,0,0))
 image(qrencode_raster(urlSite), 
@@ -42,7 +43,7 @@ image(qrencode_raster(urlSite),
       xlab="", ylab="")
 ```
 
-The QR Code generate below is about [**Lago Maggiore LTER site**](https://deims.org/f30007c4-8a6e-4f11-ab87-569db54638fe). The URL of this network is collected by sites LTER dataframe imported above.
+The QR Code generate below is about [**Lago Maggiore LTER-Italy site**](https://deims.org/f30007c4-8a6e-4f11-ab87-569db54638fe). The URL of this network is collected by sites LTER dataframe imported above.
 ```{r QRCODE Site}
 urlSite <- as.character(sitesLTER$deimsid[79])
 par(mar = c(0,0,0,0))
@@ -50,3 +51,14 @@ image(qrencode_raster(urlSite),
       asp=1, col=c("white", "#0578BE"), axes=FALSE, 
       xlab="", ylab="")
 ```
+
+## Function eLTER_QRCode
+```{r}
+eLTER_QRCode <- function(deimsid) {
+  par(mar = c(0,0,0,0))
+  image(qrencode_raster(as.character(deimsid)), 
+      asp=1, col=c("white", "#000000"), axes=FALSE, 
+      xlab="", ylab="")
+}
+```
+
