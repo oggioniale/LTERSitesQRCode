@@ -2,6 +2,11 @@ title: "eLTER_QRCode function"
 date: April 27, 2019
 author: "Alessandro Oggioni"
 description: ''
+url: https://oggioniale.github.io/LTERSitesQRCode/
+params:
+  year: 2019
+  region: Europe
+  printcode: TRUE
 output_dir: "."
 navbar:
   title: "eLTER_QRCode function"
