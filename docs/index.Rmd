@@ -60,5 +60,7 @@ eLTER_QRCode <- function(deimsid) {
       asp=1, col=c("white", "#000000"), axes=FALSE, 
       xlab="", ylab="")
 }
+
+eLTER_QRCode('https://deims.org/f30007c4-8a6e-4f11-ab87-569db54638fe')
 ```
 
