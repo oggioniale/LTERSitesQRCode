@@ -1,6 +1,6 @@
 # devtools::install_github("hrbrmstr/qrencoder")
 library(qrencoder)
-setwd("../RScripts/QRCode_Encoder")
+
 # Import Networks list
 networksLTER <- read.csv2("nameCoordsNetworks.csv", header = T, sep = ",")
 # Import Sites list
@@ -29,3 +29,13 @@ for (i in 1:nrow(sitesLTER)) {
         xlab="", ylab="")
   dev.off()
 }
+
+# Function
+eLTER_QRCode <- function(deimsid) {
+  par(mar = c(0,0,0,0))
+  image(qrencode_raster(as.character(deimsid)), 
+        asp=1, col=c("white", "#000000"), axes=FALSE, 
+        xlab="", ylab="")
+}
+
+eLTER_QRCode('https://deims.org/f30007c4-8a6e-4f11-ab87-569db54638fe')
